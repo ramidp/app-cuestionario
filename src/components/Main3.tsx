@@ -1,41 +1,47 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 import {motion} from 'framer-motion'
+import Container from '../format/preguntaStyle'
 
 const Main3 = () => {
+
+
+
+
     return ( 
-        <Container>
          <motion.div
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             >
+            <Container>
+                <form action="">
+                    <h1>Con cuanta frecuencia vas a la Peluqueria?</h1>
+                        <div className="reply-div">
+                            <div className="ind-reply">
+                                <label htmlFor="question">1 vez por mes</label>
+                                <input name="question" type="radio" />
+                            </div>
+                            <div className="ind-reply">
+                                <label htmlFor="question">2 veces por mes</label>
+                                <input name="question" type="radio" />
+                            </div>
+                            <div className="ind-reply">
+                                <label htmlFor="question">Más de 2 veces por mes</label>
+                                <input name="question" type="radio" />
+                            </div>
+                            <div className="ind-reply">
+                                <label htmlFor="question">Nunca</label>
+                                <input name="question" type="radio" />
+                            </div>
+                        </div>
 
-            <h1>Te gustaria ser Madonna?</h1>
-                <p>Si</p>
-                <p>No</p>
-
-            <div className="nav">
-                <Link to="/main2">Atras</Link>
-            </div>
-
-            </motion.div>
-        </Container>
+                    <div className="nav">
+                        <Link to="/main2">Atras</Link>
+                        <Link to=""></Link>
+                    </div>
+                </form>
+            </Container>
+         </motion.div>
      );
 }
  
 export default Main3;
-
-const Container = styled.div`
-width: 50vh;
-height: 50vh;
-background-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-    .nav {
-        display: flex;
-        justify-content: flex-start;
-        width: 100%;
-    }
-`
